@@ -1,0 +1,32 @@
+params:
+  - id: webhook_token
+    type: secret
+    name: "webhook token"
+    description: "Token for webhook verification"
+    optional: false
+
+  - id: rust_log
+    type: string
+    name: "log level"
+    description: "Log level: error, warn, info, debug, trace"
+    optional: true
+    default_value: info
+
+  - id: timezone
+    type: string
+    name: "timezone"
+    description: "Timezone setting, e.g. Asia/Shanghai, UTC, America/New_York"
+    optional: true
+    default_value: Asia/Shanghai
+
+locales:
+  zh:
+    webhook_token:
+      name: "Webhook 令牌"
+      description: "用于 webhook 验证的令牌"
+    rust_log:
+      name: "日志级别"
+      description: "日志级别：error, warn, info, debug, trace"
+    timezone:
+      name: "时区"
+      description: "时区设置，如 Asia/Shanghai, UTC, America/New_York"

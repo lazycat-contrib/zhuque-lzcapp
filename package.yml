@@ -1,0 +1,16 @@
+package: community.lazycat.app.zhuque
+version: 1.0.0
+name: ZhuQue
+description: "ZhuQue - A modern web application"
+min_os_version: 1.5.0
+author: "mtvpls"
+license: MIT
+homepage: https://github.com/mtvpls/zhuque
+
+locales:
+  zh:
+    name: "朱雀"
+    description: "一个超轻量级、高性能的定时任务管理平台"
+  en:
+    name: "ZhuQue"
+    description: "a lightweight, high-performance task scheduling platform"

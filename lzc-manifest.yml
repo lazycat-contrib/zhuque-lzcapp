@@ -1,0 +1,21 @@
+application:
+  subdomain: zhuque
+  public_path:
+    - /
+  upstreams:
+    - location: /
+      backend: http://zhuque:3000/
+
+services:
+  zhuque:
+    # ghcr.io/mtvpls/zhuque:latest
+    image: registry.lazycat.cloud/czyt/mtvpls/zhuque:7e99c9e988cb40e1
+    environment:
+      - JWT_SECRET={{ stable_secret "jwt#zhuque"}}
+      - WEBHOOK_TOKEN={{.U.webhook_token}}
+      - DATA_DIR=/app/data
+      - PORT=3000
+      - RUST_LOG={{.U.rust_log}}
+      - TZ={{.U.timezone}}
+    binds:
+      - /lzcapp/var/data:/app/data
