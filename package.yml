@@ -1,12 +1,11 @@
 package: community.lazycat.app.zhuque
-version: 1.0.0
+version: 1.3.3
 name: ZhuQue
 description: "ZhuQue - A modern web application"
 min_os_version: 1.5.0
 author: "mtvpls"
 license: MIT
 homepage: https://github.com/mtvpls/zhuque
-
 locales:
   zh:
     name: "朱雀"
