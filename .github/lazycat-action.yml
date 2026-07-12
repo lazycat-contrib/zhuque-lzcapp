@@ -1,0 +1,35 @@
+version: 1
+project:
+  root: .
+  build_config: lzc-build.yml
+  package_file: package.yml
+  output: dist/zhuque.lpk
+update:
+  strategy: publish
+  allow_downgrade: false
+  version_source:
+    type: image
+    image: zhuque
+build:
+  run_buildscript: false
+images:
+  - id: zhuque
+    target: service
+    service: zhuque
+    source: ghcr.io/mtvpls/zhuque
+    channel: custom
+    sort: created
+    tag_regex: '^latest$'
+    version_regex: '^(?P<version>latest)$'
+    version_template: '1.3.3'
+    delivery:
+      mode: lazycat
+stores:
+  official:
+    enabled: true
+    skip_if_version_exists: true
+  private:
+    enabled: true
+    skip_if_version_exists: true
+    name: 朱雀
+    summary: 超轻量、高性能的定时任务管理平台

@@ -1,5 +1,7 @@
 # ZhuQue - LazyCat 应用包
 
+每天定时检查 ZhuQue 镜像，并支持 `v*` tag 和手动触发懒猫官方商店与喵喵私有商店发布。
+
 朱雀（ZhuQue）是一个现代化 Web 应用，支持 JWT 认证和 Webhook 功能。
 
 ## 配置要求
