@@ -9,7 +9,7 @@ services:
   zhuque:
     # ghcr.io/mtvpls/zhuque:latest
     # upstream: ghcr.io/mtvpls/zhuque:latest
-    image: registry.lazycat.cloud/czyt/mtvpls/zhuque:7640919e097a7491
+    image: registry.lazycat.cloud/czyt/mtvpls/zhuque:ed824d750fca2e91
     environment:
       - JWT_SECRET={{ stable_secret "jwt#zhuque"}}
       - WEBHOOK_TOKEN={{.U.webhook_token}}
